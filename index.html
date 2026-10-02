@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anniversaire de Messou Adeline — 24 octobre 2026</title>
+<meta name="description" content="Vous êtes invités à célébrer l'anniversaire de Adeline Messou le 24 octobre 2026.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<main>
+  <section id="top">
+    <div class="frame">
+      <p class="orn">✦ ❀ ✦</p>
+      <p class="eyebrow">Invitation</p>
+      <h1>Anniversaire<br>de <span id="who"></span></h1>
+      <p class="sub">Une soirée pour rire, partager un bon repas et se retrouver autour d'elle.</p>
+      <p class="date-line" id="heroDate"></p>
+      <a class="scroll" href="#infos">Voir les détails ↓</a>
+    </div>
+  </section>
+
+  <section id="infos">
+    <h2>Les détails de la soirée</h2>
+    <p class="lead">Réservez la date, on s'occupe du reste.</p>
+    <div class="card">
+      <div class="detail"><small>Date</small><b id="dDate"></b></div>
+      <div class="detail"><small>Heure</small><b id="dTime"></b></div>
+      <div class="detail"><small>Lieu</small><b id="dPlace"></b><span id="dAddr"></span></div>
+      <a class="btn ghost" id="mapBtn" target="_blank" rel="noopener">📍 Voir sur Maps</a>
+    </div>
+  </section>
+
+  <section id="rsvp">
+    <h2>Confirmer ma présence</h2>
+    <p class="lead" id="deadlineLine"></p>
+    <div class="card">
+      <form id="form" method="POST">
+        <label class="t" for="nom">Votre nom et prénom</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label class="t">Serez-vous des nôtres ?</label>
+        <div class="choices">
+          <label><input type="radio" name="presence" value="OUI, je viens" required>Avec joie 🌹</label>
+          <label><input type="radio" name="presence" value="NON, je ne peux pas">Je ne pourrai pas</label>
+        </div>
+
+        <label class="t" for="nb">Nombre de personnes (vous compris)</label>
+        <input type="number" id="nb" name="nombre_personnes" min="1" max="10" value="1">
+
+        <label class="t" for="msg">Un petit mot (facultatif)</label>
+        <textarea id="msg" name="message" rows="3"></textarea>
+
+        <p class="center"><button class="btn" type="submit" id="send">Envoyer ma réponse</button></p>
+      </form>
+      <div id="thanks"><h3>Merci !</h3><p>Votre réponse a bien été envoyée.</p></div>
+      <div id="closed"><h3>Réponses closes</h3><p>La date limite est dépassée. Merci de contacter directement l'organisateur.</p></div>
+      <p class="center" id="gfWrap" style="display:none"><a class="btn" id="gfBtn" target="_blank" rel="noopener">Répondre à l'invitation</a></p>
+    </div>
+  </section>
+</main>
+
+<footer><p class="orn">✦ ❀ ✦</p><p>Avec toute notre affection</p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
